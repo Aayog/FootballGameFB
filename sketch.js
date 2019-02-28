@@ -27,9 +27,9 @@ function draw(){
     text(score, width/2, 50);
     text("Highscore: " + highscore, 50, 50);
     if(toShow && score > 1) {
-        showEmoji(clap);
+        showEmoji(ball.pos.y, clap);
     }else if(!toShow && score>1){
-        showEmoji(angry);
+        showEmoji(mouseY,angry);
     }
     if(score >= highscore){
         highscore = score;
@@ -41,8 +41,8 @@ function draw(){
    
     
 }
-function showEmoji(emoji){
-    image(emoji,x,ball.pos.y-100,clap.size/2);
+function showEmoji(y, emoji){
+    image(emoji,x,y -100,clap.size/2);
 }
 
 function mousePressed(){
