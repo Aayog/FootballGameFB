@@ -12,6 +12,13 @@ class Ball{
        
     }
     
+    reset(){
+        this.pos = createVector(width/2, height-this.size);
+        this.velocity = createVector(0,0);
+        this.acceleration = createVector(0,0);
+        this.gamePlay = false;
+    }
+    
     start(){
         if(!this.gamePlay){
             this.applyForce(createVector(0,-8)); 
@@ -43,13 +50,12 @@ class Ball{
         if(this.pos.y < -this.size/2){
             this.velocity.y = -this.velocity.y;
         }
+        
     }
     
     show(){
         imageMode(CENTER);
         image(this.sprite, this.pos.x, this.pos.y);
-        //ellipse(this.pos.x, this.pos.y, this.size);
-        
     }
     
     pressed(){
