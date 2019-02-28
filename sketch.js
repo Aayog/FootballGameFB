@@ -16,6 +16,7 @@ function setup(){
     createCanvas(300, 500);
     ball = new Ball(ballSprite);
     createP('<h3>Made by Aayog Koirala</h3>');
+    cursor(HAND);
 }
 
 function draw(){
