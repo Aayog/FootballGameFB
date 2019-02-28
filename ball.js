@@ -24,7 +24,7 @@ class Ball{
             this.applyForce(createVector(0,-8)); 
             this.gamePlay = true;
         }else{
-            this.applyForce(createVector(random(-2,-2),random(-6,-10)));   
+            this.applyForce(createVector(random(-3,-3),random(-7,-12)));   
         }
         
     }

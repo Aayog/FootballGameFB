@@ -15,7 +15,7 @@ function preload(){
 function setup(){
     createCanvas(300, 500);
     ball = new Ball(ballSprite);
-    
+    createP('<h3>Made by Aayog Koirala</h3>');
 }
 
 function draw(){
@@ -38,8 +38,7 @@ function draw(){
         ball.reset();
         score = 0;
     }
-   
-    
+  
 }
 function showEmoji(y, emoji){
     image(emoji,x,y -100,clap.size/2);
