@@ -13,7 +13,11 @@ function preload(){
 }
 
 function setup(){
-    createCanvas(300, 500);
+    if(screen.width < 400){
+        createCanvas(window.innerWidth-10, window.innerHeight-10);
+    }else{
+         createCanvas(300, 500);
+    }
     ball = new Ball(ballSprite);
     createP('<h3>Made by Aayog Koirala</h3>');
     cursor(HAND);
